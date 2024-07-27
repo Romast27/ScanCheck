@@ -1,0 +1,185 @@
+body {
+  width: 100%;
+  height: 100%;
+}
+html {
+  width: 100%;
+  height: 100%;
+}
+.sidebar-nav {
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
+}
+@media screen and (min-width: 1200px) {
+  .nav-con{
+    padding-left: 6px;
+    padding-right: 6px;
+    max-width: 1000px;
+    margin: auto;
+  }
+  .main-con {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 1000px;
+    margin: auto;
+    box-shadow: 5px 5px 30px 5px #000000;
+    min-height: 100%;
+    position: relative;
+  }
+  .footer {
+    max-width: 1000px;
+    margin: auto;
+  }
+}
+@media screen and (max-width:1200px) {
+  .nav-con{
+    padding-left: 6px;
+    padding-right: 6px;
+    margin: auto;
+  }
+  .main-con {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: auto;
+    box-shadow: 5px 5px 20px 5px #000000;
+    min-height: 100%;
+    position: relative;
+  }
+  .footer {
+    padding-left: 6px;
+    padding-right: 6px;
+    max-width: 1000px;
+    margin: auto;
+  }
+}
+h1 {
+  margin-left: 20px;
+  color: black;
+  font-family: "Bahnschrift SemiBold", Times, serif;
+  letter-spacing: -0.03em;
+  font-size: 60px;
+}
+.rating-area {
+  float: left;
+	overflow: hidden;
+	width: 265px;
+	margin: 0 auto;
+}
+.rating-area:not(:checked) > input {
+	display: none;
+}
+.rating-area:not(:checked) > label {
+	float: right;
+	width: 42px;
+	padding: 0;
+	cursor: pointer;
+	font-size: 32px;
+	line-height: 32px;
+	color: lightgrey;
+	text-shadow: 1px 1px #bbb;
+}
+.rating-area:not(:checked) > label:before {
+	content: '★';
+}
+.rating-area > input:checked ~ label {
+	color: gold;
+	text-shadow: 1px 1px #c60;
+}
+.rating-area:not(:checked) > label:hover,
+.rating-area:not(:checked) > label:hover ~ label {
+	color: gold;
+}
+.rating-area > input:checked + label:hover,
+.rating-area > input:checked + label:hover ~ label,
+.rating-area > input:checked ~ label:hover,
+.rating-area > input:checked ~ label:hover ~ label,
+.rating-area > label:hover ~ input:checked ~ label {
+	color: gold;
+	text-shadow: 1px 1px goldenrod;
+}
+.rate-area > label:active {
+	position: relative;
+}
+a {
+  font-weight: bold;
+  color: black;
+  padding: 0.3em 0.3em;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: solid #0005d2;
+  border-radius: 8px;
+}
+a:hover {
+  background-color: #5d9df2;
+}
+a:active {
+  background-color: black;
+}
+a:visited {
+  background-color: #5d9df2;
+}
+.sidebar-nav li{
+  font-size: 20px;
+  margin-bottom: 1em;
+}
+.info_name {
+  font-size: 22px;
+  font-weight: bold;
+  padding-right: 20px;
+}
+.info_comment {
+  display: flex;
+  align-items: center;
+}
+.text_comment {
+  font-size: 18px;
+}
+.full_comment {
+  border: solid 5px #000000;
+  border-radius: 8px;
+  margin-bottom: 5px;
+  margin-right: 200px;
+  padding-left: 3px;
+}
+.full_comment p {
+  color: black;
+}
+.detail li{
+  font-size: 25px;
+}
+input {
+  margin-bottom: 15px;
+}
+.rating-mini {
+	display: inline-block;
+	font-size: 0;
+	margin-bottom: 20px;
+	margin-left: 20px;
+}
+.rating-mini span {
+	padding: 0;
+	font-size: 20px;
+	line-height: 1;
+	color: lightgrey;
+}
+.rating-mini > span:before {
+	content: '★';
+}
+.rating-mini > span.active {
+	color: gold;
+}
+.index_p {
+  font-size: 25px;
+  padding-top: 20px;
+}
+.index_ul {
+  font-size: 28px;
+}
+#yourfeed {
+  font-size: 22px;
+  font-weight: bold;
+  padding-right: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}

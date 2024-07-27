@@ -1,0 +1,96 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+  <h2>Details about this barcode «{{ barcode }}»:</h2>
+  <ul class="detail">
+    {% if detail_code.name_product != '' %}
+      <li>Name: {{ detail_code.name_product }}</li>
+    {% endif %}
+    {% if detail_code.category_name != '' %}
+      <li>Category: {{ detail_code.category_name }}</li>
+    {% endif %}
+    {% if detail_code.brand_name != '' %}
+      <li>Brand: {{ detail_code.brand_name }}</li>
+    {% endif %}
+  </ul>
+  <form method="post">
+  {% csrf_token %}
+  <table>
+      <tr>
+        <td>{{ form.text.label_tag }}</td>
+        <td>{{ form.text }}</td>
+      </tr>
+      <tr>
+        <div class="rating-area">
+          <input type="radio" id="star-5" name="rating" value=5>
+          <label for="star-5" title="Оценка «5»"></label>
+          <input type="radio" id="star-4" name="rating" value=4>
+          <label for="star-4" title="Оценка «4»"></label>
+          <input type="radio" id="star-3" name="rating" value=3>
+          <label for="star-3" title="Оценка «3»"></label>
+          <input type="radio" id="star-2" name="rating" value=2>
+          <label for="star-2" title="Оценка «2»"></label>
+          <input type="radio" id="star-1" name="rating" value=1>
+          <label for="star-1" title="Оценка «1»"></label>
+        </div>
+      </tr>
+    </table>
+  <input type="submit" value="Submit" />
+  </form>
+  {% for item in feedbacks%}
+          <div class="full_comment">
+              <div class="info_comment">
+                  <p class="info_name">{{ item.id_author.username }}</p>
+                  <p>{{ item.time_creation }}</p>
+                  {% if item.rating == 1 %}
+                    <div class="rating-mini">
+                      <span class="active"></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+                  {% endif %}
+                  {% if item.rating == 2 %}
+                    <div class="rating-mini">
+                      <span class="active"></span>
+                      <span class="active"></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+                  {% endif %}
+                  {% if item.rating == 3 %}
+                    <div class="rating-mini">
+                      <span class="active"></span>
+                      <span class="active"></span>
+                      <span class="active"></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+                  {% endif %}
+                  {% if item.rating == 4 %}
+                    <div class="rating-mini">
+                      <span class="active"></span>
+                      <span class="active"></span>
+                      <span class="active"></span>
+                      <span class="active"></span>
+                      <span></span>
+                    </div>
+                  {% endif %}
+                  {% if item.rating == 5 %}
+                    <div class="rating-mini">
+                      <span class="active"></span>
+                      <span class="active"></span>
+                      <span class="active"></span>
+                      <span class="active"></span>
+                      <span class="active"></span>
+                    </div>
+                  {% endif %}
+              </div>
+              <div>
+                  <p class="text_comment">{{ item.text }}</p>
+              </div>
+          </div>
+  {% endfor %}
+{% endblock %}

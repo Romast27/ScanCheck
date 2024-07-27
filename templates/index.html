@@ -1,0 +1,15 @@
+{% extends 'base_generic.html' %}
+
+{% load static %}
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="{% static 'css/style_index.css' %}" type="text/css">
+
+{% block content %}
+  <p class="index_p">Here you can scan barcode from the product and leave your comment about this product or check feedback of others people about it</p>
+  <ul class="index_ul">
+    We already have:
+    <li>{{ num_barcodes }}<strong> Barcodes</strong></li>
+    <li>{{ num_feedbacks }}<strong> Feedbacks</strong></li>
+  </ul>
+{% endblock %}

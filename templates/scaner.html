@@ -1,0 +1,10 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <p class="index_p">Upload your photo with barcode</p>
+  <form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ form.image }}
+  <button class="btn btn-primary" type="submit">Upload</button>
+  </form>
+{% endblock %}
