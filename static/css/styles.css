@@ -101,23 +101,23 @@ h1 {
 .rate-area > label:active {
 	position: relative;
 }
-a {
+a, .btn {
   font-weight: bold;
   color: black;
   padding: 0.3em 0.3em;
   text-decoration: none;
   text-transform: uppercase;
-  border: solid #0005d2;
+  border: solid #000000;
   border-radius: 8px;
 }
-a:hover {
-  background-color: #5d9df2;
+a:hover, .btn:hover {
+  background-color: #aaaaaa;
 }
-a:active {
+a:active, .btn:active {
   background-color: black;
 }
-a:visited {
-  background-color: #5d9df2;
+a:visited, .btn:visited {
+  background-color: #aaaaaa;
 }
 .sidebar-nav li{
   font-size: 20px;
